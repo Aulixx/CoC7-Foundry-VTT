@@ -1,0 +1,14 @@
+.husky/_
+.idea/
+.vs/
+.vscode/
+*.log
+*.todo
+build/
+coverage/
+dist/
+fvtt.config.js
+node_modules/
+package-lock.json
+target/
+yarn.lock
