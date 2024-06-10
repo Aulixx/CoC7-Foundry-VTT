@@ -28,60 +28,37 @@
         </div>
 
         <div class="infos">
-          <div class="row flexrow">
-            <label>{{ localize 'CoC7.Name' }} :</label>
-            <input name="name" type="text" value="{{actor.name}}" />
-          </div>
-          {{#if displayPlayerName}}
-            <div class="row flexrow">
-              <label>{{ localize 'CoC7.PlayerName' }} :</label>
-              <input name="system.infos.playername" type="text" value="{{data.system.infos.playername}}" />
-            </div>
-          {{/if}}
-          {{#if pulpRuleArchetype}}
-            <div class="row flexrow">
-              <label>{{ localize 'CoC7.Archetype' }} :</label>
-              {{#if data.system.infos.archetypeSet}}
-                <span class="rollable open-item" data-type="archetype">{{data.system.infos.archetype}}</span>
-                {{#unless data.system.flags.locked}}
-                  <a class="reset-archetype" title="{{ localize 'CoC7.ResetArchetype'}}" data-type="archetype"><i class="far fa-times-circle"></i></a>
-                {{/unless}}
-              {{else}}
-                <input name="system.infos.archetype" type="text" value="{{data.system.infos.archetype}}" />
-              {{/if}}
-            </div>
-          {{/if}}
-          {{#if pulpRuleOrganization}}
-            <div class="row flexrow">
-              <label>{{ localize 'CoC7.Organization' }} :</label>
-              <input name="system.infos.organization" type="text" value="{{data.system.infos.organization}}" />
-            </div>
-          {{/if}}
-          <div class="row flexrow">
-            <label>{{ localize 'CoC7.Occupation' }} :</label>
-            {{#if data.system.infos.occupationSet}}
-              <span class="rollable open-item" data-type="occupation">{{data.system.infos.occupation}}</span>
-              {{#unless data.system.flags.locked}}
-                <a class="reset-occupation" title="{{ localize 'CoC7.ResetOccupation'}}" data-type="occupation"><i class="far fa-times-circle"></i></a>
-              {{/unless}}
-            {{else}}
-              <input name="system.infos.occupation" type="text" value="{{data.system.infos.occupation}}" />
-            {{/if}}
-          </div>
-          <div class="row flexrow">
-            <label>{{ localize 'CoC7.Age' }} :</label>
-            <input name="system.infos.age" type="text" value="{{data.system.infos.age}}" />
-            <label>{{ localize 'CoC7.Sex' }} :</label>
-            <input name="system.infos.sex" type="text" value="{{data.system.infos.sex}}" />
-          </div>
-          <div class="row flexrow">
-            <label>{{ localize 'CoC7.Residence' }} :</label>
-            <input name="system.infos.residence" type="text" value="{{data.system.infos.residence}}" />
-          </div>
-          <div class="row flexrow">
-            <label>{{ localize 'CoC7.Birthplace' }} :</label>
-            <input name="system.infos.birthplace" type="text" value="{{data.system.infos.birthplace}}" />
-          </div>
+          <table class="table">
+            <tr>
+              <td class="label-1">{{ localize 'CoC7.Name' }}:</td>
+              <td class="info-label"><input name="name" type="text" value="{{actor.name}}" /></td>
+            </tr>
+            <tr>
+              <td class="label-1">{{ localize 'CoC7.PlayerName' }}:</td>
+              <td class="info-label"><input name="system.infos.playername" type="text"
+                  value="{{data.system.infos.playername}}" /></td>
+            </tr>
+            <tr>
+              <td class="label-1">{{ localize 'CoC7.Occupation' }}:</td>
+              <td class="info-label"><input name="system.infos.occupation" type="text"
+                  value="{{data.system.infos.occupation}}" /></td>
+            </tr>
+            <tr>
+              <td class="label-1">{{ localize 'CoC7.Age' }}:</td>
+              <td class="info-label"><input name="system.infos.age" type="text" value="{{data.system.infos.age}}" /></td>
+            </tr>
+            <tr>
+              <td class="label-1">{{ localize 'CoC7.Residence' }}:</td>
+              <td class="info-label"><input name="system.infos.residence" type="text"
+                  value="{{data.system.infos.residence}}" /></td>
+            </tr>
+            <tr>
+              <td class="label-1">{{ localize 'CoC7.Birthplace' }}:</td>
+              <td class="info-label"><input name="system.infos.birthplace" type="text"
+                  value="{{data.system.infos.birthplace}}" />
+              <td>
+            </tr>     
+          </table>
         </div>
 
         <div class="characteristics">
@@ -105,32 +82,26 @@
             {{#if data.system.flags.locked}}
               <div class="attribute flex">
                 <div class="attribute-label">
-                  <h2>{{localize 'CoC7.Mov'}}:</h2>
+                  <h2>RUCH:</h2>
                 </div>
-                <div class="attribute-value">{{data.system.attribs.mov.value}}</div>
+                <div class="attribute-value-A">{{data.system.attribs.mov.value}}</div>
               </div>
               <div class="attribute flex">
                 <div class="attribute-label">
-                  <h2>{{localize 'CoC7.Build'}}:</h2>
+                  <h2>Krzepa:</h2>
                 </div>
-                <div class="attribute-value">{{data.system.attribs.build.value}}</div>
+                <div class="attribute-value-Z">+{{data.system.attribs.build.value}}</div>
               </div>
               <div class="attribute flex" data-attrib="db" data-roll-formula="{{data.system.attribs.db.value}}">
                 <div class="attribute-label rollable">
-                  <h2>{{localize 'CoC7.DB'}}:</h2>
+                  <h2>MO:</h2>
                 </div>
-                <div class="attribute-value">{{data.system.attribs.db.value}}</div>
-              </div>
-              <div class="attribute flex">
-                <div class="attribute-label">
-                  <h2>{{localize 'CoC7.Armor'}}:</h2>
-                </div>
-                <div class="attribute-value">{{data.system.attribs.armor.value}}</div>
+                <div class="attribute-value-R">+{{data.system.attribs.db.value}}</div>
               </div>
             {{else}}
               <div class="attribute {{#unless data.system.attribs.mov.auto}}manual-override{{/unless}}" data-attrib="mov">
                 <div class="attribute-label auto-toggle">
-                  <h2>{{localize 'CoC7.Mov'}}:</h2>
+                  <h2>RUCH:</h2>
                 </div>
                 <div class="attribute-value">
                   {{#if data.system.attribs.mov.auto}}
@@ -142,11 +113,11 @@
               </div>
               <div class="attribute {{#unless data.system.attribs.build.auto}}manual-override{{/unless}}" data-attrib="build">
                 <div class="attribute-label auto-toggle">
-                  <h2>{{localize 'CoC7.Build'}}:</h2>
+                  <h2>Krzepa:</h2>
                 </div>
                 <div class="attribute-value">
                   {{#if data.system.attribs.build.auto}}
-                    {{data.system.attribs.build.value}}
+                    +{{data.system.attribs.build.value}}
                   {{else}}
                     <input type="text" name="system.attribs.build.value" value="{{data.system.attribs.build.value}}" data-dtype="Number" />
                   {{/if}}
@@ -154,19 +125,13 @@
               </div>
               <div class="attribute {{#unless data.system.attribs.db.auto}}manual-override{{/unless}}" data-attrib="db" data-roll-formula="{{data.system.attribs.db.value}}">
                 <div class="attribute-label auto-toggle">
-                  <h2>{{localize 'CoC7.DB'}}:</h2>
+                  <h2>MO:</h2>
                 </div>
                 {{#if data.system.attribs.db.auto}}
-                  <div class="attribute-value">{{data.system.attribs.db.value}}</div>
+                  <div class="attribute-value">+{{data.system.attribs.db.value}}</div>
                 {{else}}
                   <div class="attribute-value"><input type="text" name="system.attribs.db.value" value="{{data.system.attribs.db.value}}" data-dtype="String" /></div>
                 {{/if}}
-              </div>
-              <div class="attribute">
-                <div class="attribute-label">
-                  <h2>{{localize 'CoC7.Armor'}}:</h2>
-                </div>
-                <div class="attribute-value"><input type="text" name="system.attribs.armor.value" value="{{data.system.attribs.armor.value}}" data-dtype="String" /></div>
               </div>
             {{/if}}
           </div>
