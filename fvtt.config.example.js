@@ -15,7 +15,7 @@
 
 const developmentOptions = {
   systemFolderName: 'CoC7',
-  userDataPath: 'PATH_TO_FOUNDRY_DATA_FOLDER'
+  userDataPath: 'C:\Users\kozka\AppData\Local\FoundryVTT\Data\systems\CoC7'
 }
 
 export default developmentOptions
