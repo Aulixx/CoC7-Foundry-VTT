@@ -1,6 +1,6 @@
 {
-  "id": "CoC-7",
-  "title": "Call of Cthulhu by Aulixx",
+  "id": "CoC7",
+  "title": "Call of Cthulhu 7th Edition",
   "description": "An implementation of the Call of Cthulhu 7th Edition game system for Foundry Virtual Tabletop.",
   "version": "0.10.16",
   "authors": [
@@ -29,42 +29,42 @@
       "type": "Item",
       "name": "skills",
       "path": "./packs/skills.db",
-      "system": "CoC-7"
+      "system": "CoC7"
     },
     {
       "label": "Items Examples",
       "type": "Item",
       "name": "items",
       "path": "./packs/items.db",
-      "system": "CoC-7"
+      "system": "CoC7"
     },
     {
       "label": "Examples",
       "type": "Actor",
       "name": "examples",
       "path": "./packs/examples.db",
-      "system": "CoC-7"
+      "system": "CoC7"
     },
     {
       "label": "Roll Requests",
       "type": "JournalEntry",
       "name": "roll-requests",
       "path": "./packs/roll-requests.db",
-      "system": "CoC-7"
+      "system": "CoC7"
     },
     {
       "label": "Sanity Roll Table",
       "type": "RollTable",
       "name": "sanity-tables-examples",
       "path": "./packs/sanity-tables-examples.db",
-      "system": "CoC-7"
+      "system": "CoC7"
     },
     {
       "label": "System manual",
       "type": "JournalEntry",
       "name": "system-doc",
       "path": "./packs/system-doc.db",
-      "system": "CoC-7"
+      "system": "CoC7"
     }
   ],
   "languages": [
@@ -149,7 +149,7 @@
   "gridUnits": "ft",
   "primaryTokenAttribute": "attribs.hp",
   "secondaryTokenAttribute": "attribs.san",
-  "url": "https://github.com/Aulixx/CoC7-FoundryVTT",
-  "manifest": "https://github.com/Aulixx/CoC7-FoundryVTT/releases/latest/download/system.json",
-  "download": "https://github.com/Aulixx/CoC7-FoundryVTT/releases/download/0.10.16/system.zip"
+  "url": "https://github.com/Miskatonic-Investigative-Society/CoC7-FoundryVTT",
+  "manifest": "https://github.com/Miskatonic-Investigative-Society/CoC7-FoundryVTT/releases/latest/download/system.json",
+  "download": "https://github.com/Miskatonic-Investigative-Society/CoC7-FoundryVTT/releases/download/0.10.16/system.zip"
 }

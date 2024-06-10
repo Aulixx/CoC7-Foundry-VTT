@@ -23,7 +23,7 @@ function systemFolderName () {
       return developmentOptions.systemFolderName
     }
   }
-  return 'CoC-7'
+  return 'CoC7'
 }
 
 /**

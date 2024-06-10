@@ -259,7 +259,7 @@ export class CoC7CharacterSheet extends CoC7ActorSheet {
   static get defaultOptions () {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['coc7', 'sheetV2', 'actor', 'character'],
-      template: 'systems/CoC-7/templates/actors/character/index.html',
+      template: 'systems/CoC7/templates/actors/character/index.html',
       width: 687,
       height: 623,
       resizable: true,

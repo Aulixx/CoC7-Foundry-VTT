@@ -10,7 +10,7 @@ export class CoC7ContainerSheet extends ActorSheet {
   static get defaultOptions () {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['coc7', 'sheet', 'actor', 'storage'],
-      template: 'systems/CoC-7/templates/actors/storage-sheet.html',
+      template: 'systems/CoC7/templates/actors/storage-sheet.html',
       width: 672,
       height: 765,
       dragDrop: [{ dragSelector: '.item', dropSelector: null }],
