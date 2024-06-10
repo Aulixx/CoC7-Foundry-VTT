@@ -52,7 +52,7 @@ export class CoC7WelcomeMessage extends Dialog {
           secondaryColor: 'rgba(103,11,11,1)',
           interactiveColor: 'rgba(103,11,11,1)',
           mainSheetBackground:
-            "url('./assets/images/background.webp') 4 repeat",
+            "url('./assets/images/background.webp')",
           mainSheetImage: "url('./assets/images/tentacles.webp')",
           additionalSheetBackground: "url('./assets/images/background.webp')"
         }

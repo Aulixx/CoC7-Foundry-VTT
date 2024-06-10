@@ -29,14 +29,6 @@
       <a class="condition-monitor {{#if data.system.conditions.criticalWounds.value}}status-on{{/if}}" title="{{localize 'CoC7.CriticalWounds'}}" data-condition="criticalWounds"><i class="game-icon game-icon-arm-sling"></i></a>
       <a class="condition-monitor {{#if data.system.conditions.dying.value}}status-on{{/if}}" title="{{localize 'CoC7.Dying'}}" data-condition="dying"><i class="game-icon game-icon-heart-beats"></i></a>
     </div>
-
-    <div class="status">
-      {{#if data.system.conditions.dead.value}}
-        <a class="condition-monitor status-on" title="{{localize 'CoC7.Dead'}}" data-condition="dead"><i class="game-icon game-icon-tombstone"></i></a>
-      {{else}}
-        <a class="{{#if data.system.conditions.dying.value}}condition-monitor dying-check{{else}}inative-status{{/if}}" title="{{#if data.system.conditions.dying.value}}{{localize 'CoC7.DyingCheck'}}{{/if}}"><i class="game-icon game-icon-d10"></i></a>
-      {{/if}}
-    </div>
   </div>
 </div>
 

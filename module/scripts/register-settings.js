@@ -344,7 +344,7 @@ export function registerSettings () {
       hint: 'SETTINGS.ArtWorkSheetBackgroundHint',
       scope: 'world',
       config: true,
-      default: "url('./assets/images/background.webp') 4 repeat",
+      default: "url('./assets/images/background.webp'",
       type: String
     })
     game.settings.register('CoC7', 'artWorkSheetBackgroundType', {
