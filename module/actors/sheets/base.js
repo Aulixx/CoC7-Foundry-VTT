@@ -1500,7 +1500,7 @@ export class CoC7ActorSheet extends ActorSheet {
         width: 520,
         height: 480,
         scrollY: ['.item-description'],
-        template: 'systems/CoC7/templates/apps/skill-details.html'
+        template: 'systems/CoC-7/templates/apps/skill-details.html'
       }
     )
     dlg.render(true)
