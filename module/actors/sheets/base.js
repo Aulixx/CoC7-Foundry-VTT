@@ -1395,7 +1395,7 @@ export class CoC7ActorSheet extends ActorSheet {
     // Toggle summary
     if (li.hasClass('expanded')) {
       const summary = li.children('.item-summary')
-      summary.slideUp(200, () => {
+      summary.slideUp(100, () => {
         summary.remove()
         li.toggleClass('expanded')
       })
@@ -1430,7 +1430,7 @@ export class CoC7ActorSheet extends ActorSheet {
       div.append(props)
 
       li.append(div.hide())
-      div.slideDown(200, () => li.toggleClass('expanded'))
+      div.slideDown(100, () => li.toggleClass('expanded'))
     }
     // $(event.currentTarget).toggleClass('expanded');
   }

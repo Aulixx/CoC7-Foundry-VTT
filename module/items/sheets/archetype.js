@@ -72,14 +72,14 @@ export class CoC7ArchetypeSheet extends ItemSheet {
     // Toggle summary
     if (li.hasClass('expanded')) {
       const summary = li.children('.item-summary')
-      summary.slideUp(200, () => summary.remove())
+      summary.slideUp(100, () => summary.remove())
     } else {
       const div = $(`<div class="item-summary">${chatData}</div>`)
       const props = $('<div class="item-properties"></div>')
       // for (const p of chatData.properties) { props.append(`<span class="tag">${p}</span>`) }
       div.append(props)
       li.append(div.hide())
-      div.slideDown(200)
+      div.slideDown(100)
     }
     li.toggleClass('expanded')
   }
