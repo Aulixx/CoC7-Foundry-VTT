@@ -40,7 +40,7 @@ export class CoCActor extends Actor {
     }
     // if (typeof data.img === 'undefined') {
     //   if (data.type === 'skill') {
-    //     data.img = 'systems/CoC7/assets/icons/skills.svg'
+    //     data.img = 'systems/CoC-7/assets/icons/skills.svg'
     //   } else if (data.type === 'status') {
     //     data.img = 'icons/svg/aura.svg'
     //   } else if (data.type === 'weapon') {
@@ -237,11 +237,11 @@ export class CoCActor extends Actor {
       })
     } else if (data.type === 'npc') {
       if (typeof data.img === 'undefined' || data.img === 'icons/svg/mystery-man.svg') {
-        data.img = 'systems/CoC7/assets/icons/cultist.svg'
+        data.img = 'systems/CoC-7/assets/icons/cultist.svg'
       }
     } else if (data.type === 'creature') {
       if (typeof data.img === 'undefined' || data.img === 'icons/svg/mystery-man.svg') {
-        data.img = 'systems/CoC7/assets/icons/floating-tentacles.svg'
+        data.img = 'systems/CoC-7/assets/icons/floating-tentacles.svg'
       }
     } else if (data.type === 'container') {
       if (typeof data.img === 'undefined' || data.img === 'icons/svg/mystery-man.svg') {

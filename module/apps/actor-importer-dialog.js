@@ -11,7 +11,7 @@ export class CoC7ActorImporterDialog extends FormApplication {
     return foundry.utils.mergeObject(super.defaultOptions, {
       classes: ['coc7', 'dialog', 'actor-importer'],
       title: game.i18n.localize('CoC7.ActorImporter'),
-      template: 'systems/CoC7/templates/apps/actor-importer.html',
+      template: 'systems/CoC-7/templates/apps/actor-importer.html',
       closeOnSubmit: false,
       width: 600,
       height: 'auto'
