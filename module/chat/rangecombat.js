@@ -803,7 +803,7 @@ export class CoC7RangeInitiator {
     for (let dIndex = 0; dIndex < this.damage.length; dIndex++) {
       const actor = chatHelper.getActorFromKey(this.damage[dIndex].targetKey) // REFACTORING (2)
       if (actor === null) {
-        ui.notifications.error(game.i18n.localize('CoC7.NoTargetToDamage'))
+       
       } else {
         this.damage[dIndex].totalTaken = 0
         this.damage[dIndex].totalAbsorbed = 0
