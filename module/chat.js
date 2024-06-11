@@ -15,10 +15,6 @@ import { InteractiveChatCard } from './chat/interactive-chat-card.js'
 import { DamageCard } from './chat/cards/damage.js'
 import { CoC7Dice } from './dice.js'
 
-const CHAT_COC7_MESSAGE = {
-  FAKEROLL:
-    '<div class="dice-roll"><div class="dice-result"><div class="dice-formula">???</div><h4 class="dice-total">?</h4></div></div>'
-}
 export class CoC7Chat {
   static renderChatMessageHook (chatMessage, html) {
     if (chatMessage.getFlag('CoC7', 'GMSelfRoll') && !game.user.isGM) {
@@ -49,25 +45,7 @@ export class CoC7Chat {
     }
   }
 
-  static fakeRollMessage () {
-    const chatData = {
-      user: game.user.id,
-      flavor: game.i18n.localize('CoC7.RollSecretDice'),
-      whisper: game.users.players,
-      type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
-      flags: {
-        CoC7: {
-          GMSelfRoll: false,
-          removeWisperTargets: true,
-          fakeRoll: true
-        }
-      },
-      content: CHAT_COC7_MESSAGE.FAKEROLL
-    }
-
-    ChatMessage.create(chatData)
-  }
-
+  
   // TODO remplacer les getElementsByxxxx par querySelector
 
   /* -------------------------------------------- *
@@ -964,9 +942,10 @@ export class CoC7Chat {
         await rangeInitiator.resolveCard()
         break
       }
-      case 'roll-range-damage': {
+      case 'roll-range-damage': { console.log("Rzut")
         const rangeInitiator = CoC7RangeInitiator.getFromCard(card)
         await rangeInitiator.rollDamage()
+        console.log("Rzut2")
         break
       }
       case 'deal-melee-damage': {

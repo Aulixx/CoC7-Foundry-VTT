@@ -69,10 +69,7 @@ export class CoC7CharacterSheet extends CoC7ActorSheet {
       this.actor.getFlag('CoC7', 'skillShowUncommon') ?? true
     sheetData.showIconsOnly = game.settings.get('CoC7', 'showIconsOnly')
 
-    if (this.actor.occupation) {
-      sheetData.data.system.infos.occupation = this.actor.occupation.name
-      sheetData.data.system.infos.occupationSet = true
-    } else sheetData.data.system.infos.occupationSet = false
+
 
     if (this.actor.archetype) {
       sheetData.data.system.infos.archetype = this.actor.archetype.name

@@ -36,7 +36,6 @@
 
     form {
       display: inline-block;
-      border: 1px solid;
       border-image: var(--main-sheet-bg);
       border-image-slice: 450 200 50 200 fill;
       border-image-width: 450 200 50 200;
@@ -197,6 +196,46 @@
               }
 
               .attribute-value-A {
+                background: hsla(0, 0%, 100%, 1.5);
+                border-radius: 0.25rem;
+                display: grid;
+                grid-area: attribute-value-A;
+                grid-template-columns: 25px;
+                grid-template-rows: 12px 10px;
+                margin-left: 5px;
+                color: var(--main-sheet-back-color);
+                font-size: 0.95rem;
+                text-align: center;
+              }
+
+              .attribute-value-RR {
+                background: hsla(0, 0%, 100%, 1);
+                border-radius: 0.25rem;
+                display: grid;
+                grid-area: attribute-value-R;
+                grid-template-columns: 16px 27px;
+                grid-template-rows: 11px 11px;
+                color: var(--main-sheet-back-color);
+                font-size: 0.95rem;
+                text-align: center;
+                margin-left: 5px;
+              }
+
+              .attribute-value-ZZ {
+                background: hsla(0, 0%, 100%, 1);
+                border-radius: 0.25rem;
+                display: grid;
+                grid-area: attribute-value-Z;
+                grid-template-columns: 20px 7px;
+                grid-template-rows: 12px 10px;
+                margin-left: 5px;
+                margin-right: 3px;
+                color: var(--main-sheet-back-color);
+                font-size: 0.95rem;
+                text-align: center;
+              }
+
+              .attribute-value-AA {
                 background: hsla(0, 0%, 100%, 1.5);
                 border-radius: 0.25rem;
                 display: grid;
@@ -490,7 +529,7 @@
             border-bottom: 0px;
             display: grid;
             font-size: .75rem;
-            grid-template-columns: 15px 160px 20px 37px;
+            grid-template-columns: 15px 160px 25px 37px;
             margin-right: 0rem;
             margin-bottom: 2px;
             width: auto;
@@ -634,7 +673,7 @@
           }
 
           .hp-group {
-            height: 6.875rem;
+            height: 4.875rem;
             width: auto;
             background-size: contain;
             background-repeat: no-repeat;
@@ -658,6 +697,7 @@
 
             .hp-text {
               padding-top: 1rem;
+              margin-top: -1rem;
             }
           }
 
@@ -692,7 +732,7 @@
             }
 
             .san-text {
-              padding-top: 1rem;
+              margin-top: -1rem;
 
               .control {
                 margin-top: -0.25rem;
@@ -724,6 +764,7 @@
 
           .magic-group {
             color: var(--main-sheet-front-color);
+            margin-top: -5rem;
 
             input {
               color: var(--main-sheet-front-color);

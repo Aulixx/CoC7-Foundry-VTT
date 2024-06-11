@@ -30,19 +30,6 @@
           {{/if}}
         </div>
       </div>
-
-      <div class="status" style="flex: 0 0 7em;">
-        <a class="condition-monitor {{#if data.system.status.prone.value}}status-on{{/if}}" title="{{localize 'CoC7.Prone'}}" data-condition="prone"><i class="game-icon game-icon-falling"></i></a>
-        <a class="condition-monitor {{#if data.system.status.unconscious.value}}status-on{{/if}}" title="{{localize 'CoC7.Unconsious'}}" data-condition="unconscious"><i class="game-icon game-icon-knocked-out-stars"></i></a>
-        <a class="condition-monitor {{#if data.system.status.criticalWounds.value}}status-on{{/if}}" title="{{localize 'CoC7.CriticalWounds'}}" data-condition="criticalWounds"><i class="game-icon game-icon-arm-sling"></i></a>
-        <a class="condition-monitor {{#if data.system.status.dying.value}}status-on{{/if}}" title="{{localize 'CoC7.Dying'}}" data-condition="dying"><i class="game-icon game-icon-heart-beats"></i></a>
-        {{#if data.system.status.dead.value}}
-          <a class="condition-monitor status-on" title="{{localize 'CoC7.Dead'}}" data-condition="dead"><i class="game-icon game-icon-tombstone"></i></a>
-        {{else}}
-          <a class="{{#if data.system.status.dying.value}}condition-monitor dying-check{{else}}inative-status{{/if}}" title="{{#if data.system.status.dying.value}}{{localize 'CoC7.DyingCheck'}}{{/if}}"><i class="game-icon game-icon-d10"></i></a>
-        {{/if}}
-      </div>
-
       <div class="flexrow attribute" data-attrib="san">
         <label class="attribute-label rollable">{{localize 'CoC7.Sanity'}}</label>
         <div class="current-value">
@@ -56,15 +43,6 @@
             <input type="text" name="system.attribs.san.max" value="{{data.system.attribs.san.max}}" data-dtype="Number" {{#if data.system.flags.locked}}readonly{{/if}} />
           {{/if}}
         </div>
-      </div>
-
-      <div class="status" style="flex: 0 0 3em;">
-        <div class="invisible">
-          <input class="locked" type="text" name="system.attribs.san.dailyLoss" value="{{data.system.attribs.san.dailyLoss}}" data-dtype="Number" readonly />
-          <input class="locked" type="text" name="system.attribs.san.dailyLimit" value="{{data.system.attribs.san.dailyLimit}}" data-dtype="Number" readonly />
-        </div>
-        <a class="condition-monitor {{#if data.system.conditions.tempoInsane.value}}status-on{{/if}}" title="{{localize 'CoC7.BoutOfMadness'}}{{#if actor.getTempoInsaneDurationText}}: {{actor.getTempoInsaneDurationText}}{{/if}}" data-condition="tempoInsane"><i class="game-icon game-icon-hanging-spider"></i></a>
-        <a class="condition-monitor {{#if data.system.conditions.indefInsane.value}}status-on{{/if}}" title="{{#if data.system.conditions.indefInsane.value}}{{localize 'CoC7.UnderlyingInsanity'}}{{else}}{{localize 'CoC7.IndefiniteInsanity'}}{{/if}}" data-condition="indefInsane"><i class="game-icon game-icon-tentacles-skull"></i></a>
       </div>
 
       <div class="flexrow" data-attrib="mp">
@@ -128,36 +106,6 @@
         {{/if}}
       </div>
     </div>
-    <div class="skills">
-      {{#if showIconsOnly}}
-        <ol class="item-list icons">
-          {{#each skillsByValue as |skill|}}
-            <li class="item" data-skill-id="{{skill._id}}" data-item-id="{{skill._id}}">
-              <div class="item-image skill-name item-name rollable" title="{{skill.name}}" style="background-image: url('{{skill.img}}')"></div>
-            </li>
-          {{/each}}
-        </ol>
-      {{else}}
-        <ol class="item-list">
-          {{#each topSkills as |skill|}}
-            <li class="item itemV2" data-skill-id="{{skill._id}}" data-item-id="{{skill._id}}">
-              <div class="item-image" style="background-image: url('{{skill.img}}')"></div>
-              <div class="item-name skill-name rollable">{{skill.name}}</div>
-              <div class="item-score">{{skill.system.value}}</div>
-              <div class="item-controls">
-                {{#unless skill.system.properties.noxpgain}}
-                  {{#if skill.system.flags.developement}}
-                    <a class="item-control development-flag active" title="{{localize 'CoC7.SkillUnflagForDevelopement'}}"><i class="fas fa-certificate"></i></a>
-                  {{else}}
-                    <a class="item-control development-flag" title="{{localize 'CoC7.SkillFlagForDevelopement'}}"><i class="fas fa-certificate"></i></a>
-                  {{/if}}
-                {{/unless}}
-              </div>
-            </li>
-          {{/each}}
-        </ol>
-      {{/if}}
-    </div>
     <div class="other">
       <ol>
         {{#each topWeapons as |weapon|}}
@@ -172,10 +120,6 @@
               </div>
               <div class="weapon-damage">
                 {{weapon.system.range.normal.damage}}
-              </div>
-              <div class="weapon-control">
-                {{#if weapon.system.properties.addb}}<span class="tag" title="Add DB">{{localize 'CoC7.WeaponAddb'}}</span>{{/if}}
-                {{#if weapon.system.properties.ahdb}}<span class="tag" title="Add DB">{{localize 'CoC7.WeaponAhdb'}}</span>{{/if}}
               </div>
             </li>
           {{else}}

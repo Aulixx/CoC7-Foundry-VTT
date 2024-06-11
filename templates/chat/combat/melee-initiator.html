@@ -9,7 +9,7 @@
       {{/if}}
       <img class="open-actor" data-actor-key="{{actorKey}}" style="flex: none;" src="{{item.img}}" title="{{item.name}}" width="36" height="36" />
       <h3 style="text-align: center;font-weight: bolder;" class="item-name card-title">{{item.name}}</h3>
-      <img class="open-actor" style="flex: none;" data-actor-key="{{targetKey}}" src="{{targetImg}}" title="{{targetName}}" width="36" height="36" />
+
     </div>
 
     <div class="card-content">
@@ -147,7 +147,7 @@
   {{else}}
     <div class="card-buttons owner-only">
       {{#each skills as |skill id|}}
-        <button data-action="melee-initiator-roll" data-skill="{{skill.id}}">{{skill.name}} : ({{skill.value}}%)</button>
+        <button data-action="melee-initiator-roll" data-skill="{{skill.id}}">{{skill.name}}</button>
       {{/each}}
     </div>
   {{/if}}

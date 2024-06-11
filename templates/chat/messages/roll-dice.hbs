@@ -21,10 +21,10 @@
             {{#if rollStatus.rolling}}
               <button data-action="impatient-roll" data-which="{{which}}">{{localize 'CoC7.WaitingOnUser'}}</button>
             {{else}}
-              <button data-action="normal-roll" data-which="{{which}}">{{localizeRollName difficulty=roll.difficulty modifier=roll.bonus name=rollStatus.fullName}}: ({{rollStatus.percent}}%)</button>
+              <button data-action="normal-roll" data-which="{{which}}"></button>
             {{/if}}
           {{else}}
-            <div class="dice-formula">{{localizeRollName difficulty=roll.difficulty modifier=roll.bonus name=rollStatus.fullName}}: ({{rollStatus.percent}}%)</div>
+            <div class="dice-formula">: ({{rollStatus.percent}}%)</div>
           {{/if}}
         </div>
       {{/if}}

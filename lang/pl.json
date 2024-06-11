@@ -302,7 +302,7 @@
   "CoC7.rangeCombatCard.FastMovingTarget": "Szybki cel",
   "CoC7.rangeCombatCard.InMelee": "Walka w wręcz",
   "CoC7.rangeCombatCard.aiming": "Celowanie",
-  "CoC7.rangeCombatDamage": "{name} otrzymuje {total} punktów obrażeń",
+  "CoC7.rangeCombatDamage": "Całkowite obrażenia : {total}",
   "CoC7.rangeCombatDamageArmor": "{name} otrzymuje {total} obrażeń. ({armor} odparto)",
   "CoC7.RollDamage": "Rzuć na Obrażenia",
   "CoC7.BulletsFired": "Wystrzelono kule",

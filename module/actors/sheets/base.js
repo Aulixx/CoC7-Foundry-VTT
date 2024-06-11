@@ -1559,36 +1559,7 @@ export class CoC7ActorSheet extends ActorSheet {
       CoC7ContentLinkDialog.create(linkData, { actors: [this.actor] })
     } else {
       let proceedWithoutTarget
-      if (game.user.targets.size <= 0) {
-        proceedWithoutTarget = await new Promise(resolve => {
-          const data = {
-            title: ' ',
-            content: game.i18n.format('CoC7.NoTargetSelected', {
-              weapon: weapon.name
-            }),
-            buttons: {
-              cancel: {
-                icon: '<i class="fas fa-times"></i>',
-                label: game.i18n.localize('CoC7.Cancel'),
-                callback: () => {
-                  return resolve(false)
-                }
-              },
-              proceed: {
-                icon: '<i class="fas fa-check"></i>',
-                label: game.i18n.localize('CoC7.Proceed'),
-                callback: () => {
-                  return resolve(true)
-                }
-              }
-            },
-            default: 'cancel',
-            classes: ['coc7', 'dialog']
-          }
-          new Dialog(data).render(true)
-        })
-      }
-      if (game.user.targets.size > 0 || proceedWithoutTarget) {
+      if (game.user.targets.size >= 0 || proceedWithoutTarget) {
         if (!weapon.system.properties.rngd) {
           if (game.user.targets.size > 1) {
             ui.notifications.warn(game.i18n.localize('CoC7.WarnTooManyTarget'))
