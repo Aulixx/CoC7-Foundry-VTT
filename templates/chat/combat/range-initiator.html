@@ -323,10 +323,15 @@
         <div class="dice-result" data-total="{{roll.dices.total}}" data-ten-result="{{roll.dices.tenResult}}">
           <div
             class="dice-formula {{#if roll.isSuccess}}success{{else}}failure{{/if}}{{#if roll.isCritical}} critical{{/if}}{{#if roll.isFumble}} fumble{{/if}}"
-            style="line-height: 16px;margin-bottom: 2px;">
-            {{roll.dices.total}} {{roll.resultType}}
-
+            style="line-height: 21px;margin-bottom: 2px;">
+            {{roll.resultType}}
           </div>
+          <div
+          class="dice-formula {{#if roll.isSuccess}}success{{else}}failure{{/if}}{{#if roll.isCritical}} critical{{/if}}{{#if roll.isFumble}} fumble{{/if}}"
+          style="line-height: 21px;margin-bottom: 2px;">
+          {{roll.dices.total}} 
+        </div>
+
           <div class="dice-tooltip" style="display: none;">
             <section class="tooltip-part">
               <div class="dice ten-dice">
@@ -423,7 +428,7 @@
       data-critical="{{d.critical}}" data-dealt="{{d.dealt}}" data-result-string="{{resultString}}">
       <div class="dice-roll">
         <div class="dice-result">
-          <div class="dice-formula {{#if d.critical}}critical{{/if}}" style="line-height: 16px;margin-bottom: 2px;">
+          <div class="dice-formula {{#if d.critical}}critical{{/if}}" style="line-height: 21px;margin-bottom: 2px;font-size: large; font-weight: bold;">
             {{resultString}} {{#if d.dealt}}<i class="fas fa-check"></i>{{/if}}
           </div>
           <div class="dice-tooltip" style="display: none;">
