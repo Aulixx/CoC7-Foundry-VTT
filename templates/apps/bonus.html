@@ -2,14 +2,6 @@
 
   <div class="flexcol">
 
-    {{#if cardTypes}}
-      <div class="flexrow">
-        <label>{{localize 'CoC7.CardType'}}</label>
-        <select name="cardType">
-          {{selectOptions cardTypes selected=options.cardType localize=true}}
-        </select>
-      </div>
-    {{/if}}
 
     {{#if options.askValue}}
       <div class="flexrow">
