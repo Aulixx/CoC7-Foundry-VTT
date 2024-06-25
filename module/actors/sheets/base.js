@@ -537,8 +537,6 @@ export class CoC7ActorSheet extends ActorSheet {
               classes: 'main',
               items: [
                 { action: 'roll', label: 'Roll' },
-                { action: 'opposed-roll', label: 'Opposed roll' },
-                { action: 'combined-roll', label: 'Combined roll' }
               ]
             },
             {
@@ -568,10 +566,10 @@ export class CoC7ActorSheet extends ActorSheet {
             {
               classes: 'main',
               items: [
-                { action: 'encounter', label: 'Encounter' },
+               // { action: 'encounter', label: 'Encounter' },
                 { action: 'roll', label: 'Roll' },
-                { action: 'opposed-roll', label: 'Opposed roll' },
-                { action: 'combined-roll', label: 'Combined roll' }
+                //{ action: 'opposed-roll', label: 'Opposed roll' },
+                //{ action: 'combined-roll', label: 'Combined roll' }
               ]
             },
             {

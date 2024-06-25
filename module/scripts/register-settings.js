@@ -532,7 +532,7 @@ export function registerSettings () {
     name: 'Hidden dev menu',
     hint: 'Use at your own risk',
     scope: 'world',
-    config: false,
+    config: true,
     type: Boolean,
     default: false
   })

@@ -1,7 +1,7 @@
 /* global ChatMessage, CONFIG, game, Roll */
 
 export class CoC7Dice {
-  static async roll (modif = 0, rollMode = null, hideDice = false) {
+  static async roll(modif = 0, rollMode = null, hideDice = false) {
     let alternativeDice = ''
     if (game.modules.get('dice-so-nice')?.active) {
       if (modif < 0) {
@@ -24,11 +24,11 @@ export class CoC7Dice {
     } else {
       roll = await new Roll(
         '1dt' +
-          (alternativeDice !== ''
-            ? '+1do[' + alternativeDice + ']'
-            : '+1dt'
-          ).repeat(Math.abs(modif)) +
-          '+1d10'
+        (alternativeDice !== ''
+          ? '+1do[' + alternativeDice + ']'
+          : '+1dt'
+        ).repeat(Math.abs(modif)) +
+        '+1d10'
       ).roll({ async: true })
     }
 
@@ -70,7 +70,7 @@ export class CoC7Dice {
     return result
   }
 
-  static async showRollDice3d (roll) {
+  static async showRollDice3d(roll) {
     if (game.modules.get('dice-so-nice')?.active) {
       const syncDice = game.settings.get('CoC7', 'syncDice3d')
 
@@ -90,7 +90,7 @@ export class CoC7Dice {
     }
   }
 
-  static async combinedRoll (options) {
+  static async combinedRoll(options) {
     options.pool = options.pool ?? {}
     options.pool['0'] = false
     const keys = Object.keys(options.pool).map(v => parseInt(v, 10))
@@ -205,7 +205,7 @@ export class CoC7Dice {
         modifiers: [],
         results: [
           {
-            result: 9,
+            result: 0,
             active: true
           }
         ]
@@ -225,13 +225,13 @@ export class CoC7Dice {
         modifiers: [],
         results: [
           {
-            result: 9,
+            result: 0,
             active: true
           }
         ]
       }
     ],
-    total: 99,
+    total: 100,
     evaluated: true
   }
 

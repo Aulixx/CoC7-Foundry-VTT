@@ -39,6 +39,7 @@ export class CoC7Menu {
       icon: 'game-icon game-icon-tentacle-strike',
       visible: isKeeper,
       tools: [
+
         {
           toggle: true,
           icon: 'fas fa-angle-double-up',
@@ -79,20 +80,7 @@ export class CoC7Menu {
           title: 'CoC7.toggleXP',
           onClick: async toggle => await CoC7Utilities.toggleXPGain(toggle)
         },
-        {
-          button: true,
-          icon: 'game-icon game-icon-card-joker',
-          name: 'fakeroll',
-          title: 'CoC7.FakeRoll',
-          onClick: CoC7Chat.fakeRollMessage
-        },
-        {
-          button: true,
-          icon: 'fas fa-moon',
-          name: 'startrest',
-          title: 'CoC7.startRest',
-          onClick: async () => await CoC7Utilities.getTarget()
-        }
+        
       ]
     })
     if (showHiddenDevMenu) {
@@ -100,7 +88,7 @@ export class CoC7Menu {
       controls.push({
         name: 'coc7DevMenu',
         title:
-          "Dev tools. If you don't know what it is, you don't need it and you shouldn't use it !!",
+          "Dev tools",
         layer: 'coc7DevTools',
         icon: 'game-icon game-icon-police-badge',
         visible: isKeeper,
@@ -110,7 +98,7 @@ export class CoC7Menu {
             icon: 'game-icon game-icon-dice-fire',
             name: 'alwaysCrit',
             active: game.CoC7.dev.dice.alwaysCrit,
-            title: 'All rolls will crit',
+            title: 'Krytyczny Sukces',
             onClick: toggle => {
               game.CoC7.dev.dice.alwaysFumble = false
               game.CoC7.dev.dice.alwaysCrit = toggle
@@ -121,7 +109,7 @@ export class CoC7Menu {
             icon: 'game-icon game-icon-fire-extinguisher',
             name: 'alwaysFumble',
             active: game.CoC7.dev.dice.alwaysFumble,
-            title: 'All rolls will fumble',
+            title: 'Krytyczna Porażka',
             onClick: toggle => {
               game.CoC7.dev.dice.alwaysFumble = toggle
               game.CoC7.dev.dice.alwaysCrit = false
