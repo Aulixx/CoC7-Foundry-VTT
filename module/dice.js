@@ -1,7 +1,7 @@
 /* global ChatMessage, CONFIG, game, Roll */
 
 export class CoC7Dice {
-  static async roll(modif = 0, rollMode = null, hideDice = false) {
+  static async roll (modif = 0, rollMode = null, hideDice = false) {
     let alternativeDice = ''
     if (game.modules.get('dice-so-nice')?.active) {
       if (modif < 0) {
@@ -21,7 +21,13 @@ export class CoC7Dice {
       game.settings.get('CoC7', 'hiddendevmenu')
     ) {
       roll = Roll.fromData(CoC7Dice.fumble99)
-    } else {
+    } else if (
+      game.CoC7.dev.dice.extreme &&
+      game.settings.get('CoC7', 'hiddendevmenu')
+    ) {
+      roll = Roll.fromData(CoC7Dice.extreme)
+      
+    }  else {
       roll = await new Roll(
         '1dt' +
         (alternativeDice !== ''
@@ -70,7 +76,7 @@ export class CoC7Dice {
     return result
   }
 
-  static async showRollDice3d(roll) {
+  static async showRollDice3d (roll) {
     if (game.modules.get('dice-so-nice')?.active) {
       const syncDice = game.settings.get('CoC7', 'syncDice3d')
 
@@ -90,7 +96,7 @@ export class CoC7Dice {
     }
   }
 
-  static async combinedRoll(options) {
+  static async combinedRoll (options) {
     options.pool = options.pool ?? {}
     options.pool['0'] = false
     const keys = Object.keys(options.pool).map(v => parseInt(v, 10))
@@ -279,4 +285,6 @@ export class CoC7Dice {
     total: 1,
     evaluated: true
   }
+
+  
 }

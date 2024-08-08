@@ -134,7 +134,8 @@ Hooks.once('init', async function () {
     dev: {
       dice: {
         alwaysCrit: false,
-        alwaysFumble: false
+        alwaysFumble: false,
+        extreme:false
       }
     },
     eras: (era, name) => {

@@ -8,15 +8,12 @@
         <label>{{localize 'CoC7.RollThreshold'}}</label>
         <input type="number" name="threshold" value="{{options.threshold}}" />
       </div>
-
-       <div class="flexrow"> 
-        <label>Kości</label>
-        <select name="difficulty">
-            <option value="{{game.CoC7.dev.dice.alwaysCrit}}" {{#if game.CoC7.dev.dice.alwaysCrit}}selected{{/if}}>Krytyczny Sukces</option> 
-            <option value="{{CoC7Dice.fumble99}}" {{#if options.CoC7Dice.fumble99}}selected{{/if}}>Krytyczna Porażka</option>   
-        </select>    
-      </div>
     {{/if}}
+
+    <div class="flexrow">
+      <label>"Kosci"</label>
+      <input type="number" name="threshold" value="{{options.dice}}" />
+    </div>
 
 
     {{#if allowFlatDiceModifier}}
@@ -25,8 +22,6 @@
         <input type="number" name="flatDiceModifier" value="{{#if options.flatDiceModifier}}{{options.flatDiceModifier}}{{else}}0{{/if}}" />
       </div>
     {{/if}}
-
-   
 
     {{#if allowFlatThresholdModifier}}
       <div class="flexrow">

@@ -4,6 +4,7 @@ import { CoC7Utilities } from './utilities.js'
 import { CoC7ActorImporterDialog } from './apps/actor-importer-dialog.js'
 import { CoC7ContentLinkDialog } from './apps/coc7-content-link-dialog.js'
 import { CoC7InvestigatorWizard } from './apps/investigator-wizard.js'
+import { COC7RollDialog } from './apps/dev-roll-dialog.js'
 
 class CoC7MenuLayer extends PlaceablesLayer {
   constructor () {
@@ -39,7 +40,15 @@ export class CoC7Menu {
       icon: 'game-icon game-icon-tentacle-strike',
       visible: isKeeper,
       tools: [
-
+        {
+          toggle: true,
+          icon: 'fas fa-certificate',
+          class: 'xp_toggle',
+          name: 'xptoggle',
+          active: game.settings.get('CoC7', 'xpEnabled'),
+          title: 'CoC7.toggleXP',
+          onClick: async toggle => await CoC7Utilities.toggleXPGain(toggle)
+        },
         {
           toggle: true,
           icon: 'fas fa-angle-double-up',
@@ -72,15 +81,12 @@ export class CoC7Menu {
           onClick: async () => await CoC7InvestigatorWizard.create()
         },
         {
-          toggle: true,
-          icon: 'fas fa-certificate',
-          class: 'xp_toggle',
-          name: 'xptoggle',
-          active: game.settings.get('CoC7', 'xpEnabled'),
-          title: 'CoC7.toggleXP',
-          onClick: async toggle => await CoC7Utilities.toggleXPGain(toggle)
+          button: true,
+          icon: 'game-icon game-icon-police-badge',
+          name: 'Dev-Roll',
+          title: 'CoC7.DevRoll.Title',
+          onClick: async () => await COC7RollDialog.create()
         },
-        
       ]
     })
     if (showHiddenDevMenu) {
@@ -100,10 +106,11 @@ export class CoC7Menu {
             active: game.CoC7.dev.dice.alwaysCrit,
             title: 'Krytyczny Sukces',
             onClick: toggle => {
-              game.CoC7.dev.dice.alwaysFumble = false
+            
               game.CoC7.dev.dice.alwaysCrit = toggle
             }
           },
+  
           {
             toggle: true,
             icon: 'game-icon game-icon-fire-extinguisher',
@@ -112,9 +119,10 @@ export class CoC7Menu {
             title: 'Krytyczna Porażka',
             onClick: toggle => {
               game.CoC7.dev.dice.alwaysFumble = toggle
-              game.CoC7.dev.dice.alwaysCrit = false
+              
             }
-          }
+          },
+
         ]
       })
     }
@@ -124,23 +132,21 @@ export class CoC7Menu {
     const isKeeper = game.user.isGM
     const keeperMenu = html.find('.game-icon-tentacle-strike').parent()
     keeperMenu.addClass('coc7-menu')
-    if (isKeeper) {
-      keeperMenu.after(
-        '<li class="scene-control coc7-menu coc7-create-link" title="' +
-          game.i18n.localize('CoC7.CreateLink') +
-          '"><i class="fas fa-link"></i></li>'
-      )
-    }
-    keeperMenu.after(
-      '<li class="scene-control coc7-menu coc7-dice-roll" title="' +
-        game.i18n.localize('CoC7.RollDice') +
-        '"><i class="game-icon game-icon-d10"></i></li>'
-    )
+    if (isKeeper) 
+
+   // keeperMenu.after(
+    //  '<li class="scene-control coc7-menu coc7-dice-roll" title="' +
+     //   game.i18n.localize('CoC7.RollDice') +
+//'"><i class="game-icon game-icon-d20"></i></li>'
+    //)
     html
       .find('.coc7-menu.coc7-dice-roll')
       .click(event => CoC7Utilities.rollDice(event))
     html
       .find('.coc7-menu.coc7-create-link')
       .click(event => CoC7ContentLinkDialog.create(event))
+     // html
+     // .find('.coc7-menu.coc7-dice-roll')
+      //.click(event => COC7RollDialog.rollDice(event))
   }
 }

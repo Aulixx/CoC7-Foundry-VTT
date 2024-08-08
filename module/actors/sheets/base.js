@@ -536,7 +536,8 @@ export class CoC7ActorSheet extends ActorSheet {
             {
               classes: 'main',
               items: [
-                { action: 'roll', label: 'Roll' },
+                { action: 'roll', label: 'Rzut K/P' },
+               
               ]
             },
             {

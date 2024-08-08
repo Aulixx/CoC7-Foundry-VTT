@@ -148,7 +148,7 @@
   "CoC7.WhisperTo": "Szepnij do",
   "CoC7.SendToChat": "Wyślij do chatu",
 
-  "CoC7.RegularSuccess": "Normalny sukces",
+  "CoC7.RegularSuccess": "Sukces",
   "CoC7.HardSuccess": "Trudny sukces",
   "CoC7.ExtremeSuccess": "Ekstremalny sukces",
   "CoC7.CriticalSuccess": "Krytyczny sukces",
@@ -170,7 +170,7 @@
   "CoC7.Pushing": "Forsowanie",
   "CoC7.PushSkill": "Forsuj",
   "CoC7.PushingSkill": ": forsuje!",
-  "CoC7.PushedRoll": "(forsowany rzut)",
+  "CoC7.PushedRoll": "",
   "CoC7.SpendLuck": "Wydaj {luckNeededValue} szczęścia do zaliczenia",
   "CoC7.LuckSpent": "Wydano {luckAmount} szczęścia",
   "CoC7.LuckSpentAlt": "Szczęście wydane",
@@ -232,9 +232,9 @@
   "CoC7.CloseCard": "Zamknij kartę",
   "CoC7.AttackManeuver": "Manewr",
 
-  "CoC7.CheckResult": "Sprawdź {name}. ({value}%) - {difficulty}",
-  "CoC7.ItemCheckResult": "{item} - {skill} Sprawdź ({value}%) - {difficulty} trudnosć",
-  "CoC7.CheckRawValue": "({rawvalue}%) - {difficulty} trudnosć",
+  "CoC7.CheckResult": "{name} - {value}%",
+  "CoC7.ItemCheckResult": "{item} - {skill} Test - {value}%",
+  "CoC7.CheckRawValue": "({rawvalue}%)",
 
   "CoC7.ArmorAbsorbsDamage": "Pancerz pochłania wszystkie obrażenia",
   "CoC7.ArmorIgnored": "Pancerz zignorowany",
@@ -336,7 +336,7 @@
   "CoC7.SkillOccupation": "Zawód",
   "CoC7.SkillPersonal": "Osobista",
 
-  "CoC7.SkillTotalExperience": "Punkty doświadczenia",
+  "CoC7.SkillTotalExperience": "Punkty",
   "CoC7.SkillTotalArchetype": "Punkty archetypów",
   "CoC7.SkillTotalOccupation": "Punkty zawodu",
   "CoC7.SkillTotalPersonal": "Punkty postaci",
@@ -355,7 +355,7 @@
   "CoC7.WeaponUsesPerRound": "Użycia na rundę",
   "CoC7.WeaponUsesPerRoundHint": "Ataki na rundę (1/3 : 1 atak na 3 rundy)",
   "CoC7.WeaponSheet.RoundsPerUse.Info": "Ile rund potrzeba, aby broń była gotowa do strzału",
-  "CoC7.WeaponMax": "Maksymalna liczba użyć / runda",
+  "CoC7.WeaponMax": " Maks. użyć / runda",
   "CoC7.BurstSize": "Pociski / seria",
   "CoC7.BurstSizeHint": "Liczba pocisków na serię",
   "CoC7.WeaponBulletsInMag": "Magazynek",
