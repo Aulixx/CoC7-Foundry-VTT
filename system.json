@@ -65,6 +65,13 @@
       "name": "system-doc",
       "path": "./packs/system-doc.db",
       "system": "CoC7"
+    },
+    {
+      "label": "1920 Occupations",
+      "type": "Item",
+      "name": "occupations",
+      "path": "./packs/system-doc.db",
+      "system": "CoC7"
     }
   ],
   "languages": [
