@@ -157,6 +157,6 @@
   "primaryTokenAttribute": "attribs.hp",
   "secondaryTokenAttribute": "attribs.san",
   "url": "https://github.com/Aulixx/CoC7-Foundry-VTT",
-  "manifest": "https://github.com/Aulixx/CoC7-Foundry-VTT/releases/latest/download/system.json",
-  "download": "https://github.com/Aulixx/CoC7-Foundry-VTT/releases/download/0.10.16/system.zip"
+  "manifest": "https://github.com/Aulixx/CoC7-Foundry-VTT/releases/download/CoC7/system.json",
+  "download": "https://github.com/Aulixx/CoC7-Foundry-VTT/releases/download/CoC7/system.zip"
 }
