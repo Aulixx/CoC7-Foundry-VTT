@@ -179,22 +179,6 @@
               {{/if}}
             {{/unless}}
 
-            {{#unless pushing}}
-              {{#if canIncreaseSuccess}}
-                <div class="increase-success">
-                  {{#each increaseSuccess as |level key|}}
-                    <button
-                      data-index="{{key}}"
-                      data-action="useLuck"
-                      data-luck-amount="{{level.luckToSpend}}"
-                      data-luck-to-spend="{{level.luckToSpend}}"
-                      data-new-success-level="{{level.difficulty}}"
-                      data-difficulty="{{level.difficulty}}"
-                      data-difficulty-name="{{difficultyName}}">{{localize 'CoC7.IncreaseSuccessLevel'}} : {{level.difficultyName}} - {{level.luckToSpend}} {{ localize 'CoC7.Luck'}}.</button>
-                  {{/each}}
-                </div>
-              {{/if}}
-            {{/unless}}
           </div>
         </div>
         {{#unless hideDiceResult}}
