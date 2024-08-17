@@ -6,7 +6,7 @@ import { CoC7CreateMythosEncounter } from '../../apps/create-mythos-encounters.j
 import { chatHelper } from '../../chat/helper.js'
 
 export class CoC7CharacterSheet extends CoC7ActorSheet {
-  _getHeaderButtons () {
+  /*_getHeaderButtons () {
     if (this.constructor.name === 'CoC7CharacterSheet') {
       if (!this.summarized) this.summarized = false
       let buttons = super._getHeaderButtons()
@@ -26,12 +26,12 @@ export class CoC7CharacterSheet extends CoC7ActorSheet {
           class: 'drag-test-thingy',
           icon: 'game-icon game-icon-d10',
           ondragstart: () => ui.notifications.info('drag started')
-        } */
+        } tutaj usunąłem comment 
       ].concat(buttons)
       return buttons
     }
     return super._getHeaderButtons()
-  }
+  }*/
 
   async toggleSheetMode (event) {
     this.summarized = !this.summarized
