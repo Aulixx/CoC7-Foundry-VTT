@@ -8,7 +8,7 @@ export class CoC7CompendiumDirectory extends CompendiumDirectory {
     } else if (typeof game.babele !== 'undefined') {
       for (const v of Object.values(game.babele.modules)) {
         if (v.lang === game.i18n.lang) {
-          translated = true
+          translated = tru
         }
       }
     }

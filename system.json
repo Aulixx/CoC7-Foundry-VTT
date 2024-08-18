@@ -25,45 +25,10 @@
   ],
   "packs": [
     {
-      "label": "Skills",
+      "label": "Umiejętności",
       "type": "Item",
       "name": "skills",
       "path": "./packs/skills.db",
-      "system": "CoC7"
-    },
-    {
-      "label": "Items Examples",
-      "type": "Item",
-      "name": "items",
-      "path": "./packs/items.db",
-      "system": "CoC7"
-    },
-    {
-      "label": "Examples",
-      "type": "Actor",
-      "name": "examples",
-      "path": "./packs/examples.db",
-      "system": "CoC7"
-    },
-    {
-      "label": "Roll Requests",
-      "type": "JournalEntry",
-      "name": "roll-requests",
-      "path": "./packs/roll-requests.db",
-      "system": "CoC7"
-    },
-    {
-      "label": "Sanity Roll Table",
-      "type": "RollTable",
-      "name": "sanity-tables-examples",
-      "path": "./packs/sanity-tables-examples.db",
-      "system": "CoC7"
-    },
-    {
-      "label": "System manual",
-      "type": "JournalEntry",
-      "name": "system-doc",
-      "path": "./packs/system-doc.db",
       "system": "CoC7"
     },
     {
