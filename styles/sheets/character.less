@@ -61,12 +61,13 @@
       .container {
 
         background-repeat: no-repeat;
-        margin: -1px;
+        margin: 0px;
         display: grid;
+        position: relative;
         grid-template-columns: auto;
         grid-template-rows: 12.1875rem 1.875rem auto;
         width: 100%;
-        height: 98.5%;
+        height: 99.5%;
 
         .sheet-header {
           width: 100%;
@@ -95,7 +96,7 @@
             display: inline-block;
             width: 26.6875rem;
             padding: 1px 0.5rem;
-            border-left: 81px solid;         
+            border-left: 81px solid;
             border-color: transparent;
             margin-top: 12px;
 
@@ -164,12 +165,13 @@
                 h2 {
                   border: 0;
                   padding: 0;
-                  margin: 0;
+                  margin-bottom: 3px;
+                  margin-right: -3px;
                   line-height: 1.375rem;
-                  font-size: 0.75rem;
+                  font-size: 0.9rem;
                   color: var(--main-sheet-front-color);
                   font-weight: normal;
-                  text-align: right;
+                  text-align: center;
                   text-overflow: ellipsis;
                   white-space: nowrap;
                   overflow: hidden;
@@ -177,7 +179,7 @@
               }
 
               .attribute-value-R {
-                background: hsla(0, 0%, 100%, 1);
+                background: transparent;
                 border-radius: 0.25rem;
                 display: grid;
                 grid-area: attribute-value-R;
@@ -187,10 +189,11 @@
                 font-size: 0.95rem;
                 text-align: center;
                 margin-left: 5px;
+                margin-top: 2px;
               }
 
               .attribute-value-Z {
-                background: hsla(0, 0%, 100%, 1);
+                background: transparent;
                 border-radius: 0.25rem;
                 display: grid;
                 grid-area: attribute-value-Z;
@@ -201,10 +204,11 @@
                 color: var(--main-sheet-back-color);
                 font-size: 0.95rem;
                 text-align: center;
+                margin-top: 2px;
               }
 
               .attribute-value-A {
-                background: hsla(0, 0%, 100%, 1.5);
+                background: transparent;
                 border-radius: 0.25rem;
                 display: grid;
                 grid-area: attribute-value-A;
@@ -214,48 +218,46 @@
                 color: var(--main-sheet-back-color);
                 font-size: 0.95rem;
                 text-align: center;
+                margin-top: 2px;
               }
 
               .attribute-value-RR {
-                background: hsla(0, 0%, 100%, 1);
+                background: transparent;
                 border-radius: 0.25rem;
                 display: grid;
-          
-                grid-template-columns: 16px 27px;
-                grid-template-rows: 11px 11px;
+                grid-template-columns: 16px 28px;
+                grid-template-rows: 11px 12px;
                 color: var(--main-sheet-back-color);
-                font-size: 0.95rem;
+                font-size: 1.25rem;
                 text-align: center;
-                margin-left: 40px;
+                margin-left: 22px;
+                margin-right: 18px;
               }
 
               .attribute-value-ZZ {
-                background: hsla(0, 0%, 100%, 1);
+                background: transparent;
                 border-radius: 0.25rem;
                 display: grid;
-                grid-area: attribute-value-Z;
-                grid-template-columns: 20px 7px;
-                grid-template-rows: 12px 10px;
-                margin-left: 5px;
-                margin-right: 3px;
+                grid-template-columns: 16px 28px;
+                grid-template-rows: 11px 12px;
                 color: var(--main-sheet-back-color);
-                font-size: 0.95rem;
+                font-size: 1.25rem;
                 text-align: center;
-                margin-left: 40px;
+                margin-left: 22px;
+                margin-right: 18px;
               }
 
               .attribute-value-AA {
-                background: hsla(0, 0%, 100%, 1.5);
+                background: transparent;
                 border-radius: 0.25rem;
                 display: grid;
-                grid-area: attribute-value-A;
-                grid-template-columns: 25px;
-                grid-template-rows: 12px 10px;
-                margin-left: 5px;
+                grid-template-columns: 16px 28px;
+                grid-template-rows: 11px 12px;
                 color: var(--main-sheet-back-color);
-                font-size: 0.95rem;
+                font-size: 1.25rem;
                 text-align: center;
-                margin-left: 40px;
+                margin-left: 22px;
+                margin-right: 18px;
               }
 
               .attribute-value {
@@ -367,13 +369,15 @@
         }
 
         .sheet-nav {
-          border-top: 1px solid var(--main-sheet-front-color);
-          border-left: 1px solid var(--main-sheet-front-color);
-          border-right: 1px solid var(--main-sheet-front-color);
+          //border-top: 1px solid var(--main-sheet-front-color);
+          //border-left: 1px solid var(--main-sheet-front-color);
+          //border-right: 1px solid var(--main-sheet-front-color);
           color: var(--main-sheet-front-color);
           font-weight: bold;
           font-size: 1rem;
-          margin: 0 1rem;
+          margin: 0px 3rem;
+          margin-left: 6.5rem;
+          margin-right: 1.5rem;
           display: flex;
           flex-direction: row;
           flex-wrap: wrap;
@@ -442,7 +446,7 @@
         }
 
         .sheet-body {
-          border: 1px solid var(--main-sheet-front-color);
+          //border: 1px solid var(--main-sheet-front-color);
           margin: 0 1rem 0.5rem 1rem;
           overflow: hidden;
 
@@ -469,7 +473,7 @@
 
           .character-background {
             .editor {
-              height: calc(100% - 40px);
+              height: calc(100%);
             }
           }
 
@@ -486,6 +490,7 @@
               flex: 0 0 7.125rem;
               height: auto;
               margin: 0.5rem 0;
+              margin-top: 10px;
               padding: 0;
               border-right: 0px solid;
               text-align: center;
@@ -527,7 +532,8 @@
           .item-list {
             display: flex;
             width: auto;
-            height: 101%;
+            height: 99%;
+            margin-top: 5px;
             flex-direction: column;
             flex-wrap: wrap;
           }
@@ -539,7 +545,7 @@
           }
 
           .itemV2 {
-            
+
             display: grid;
             font-size: .75rem;
             grid-template-columns: 9px 179px 21px 37px;
@@ -597,7 +603,7 @@
             .item-controls {
               // font-family: system-ui;
               font-size: 0.625rem;
-              line-height: 1rem;
+              line-height: 0rem;
               flex: 0 0 1.25rem;
               display: block;
               text-align: end;
@@ -627,7 +633,7 @@
           .luck-group {
             display: inline-block;
             width: fit-content;
-            font-size: large;
+            font-size: larger;
           }
 
           .monitor {

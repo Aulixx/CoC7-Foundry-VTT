@@ -2,12 +2,13 @@
   .combat-panel {
     padding: 0 4px;
     height: 100%;
+    margin-top: 5px;
     overflow-y: auto;
     .section-header {
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
-      width: 100%;
+      width: 420px;
       text-align: left;
       color: white;
       background-color: var(--main-sheet-front-color);
@@ -16,7 +17,7 @@
       height: 1.375rem;
       line-height: 1.375rem;
       padding: 0 8px;
-      margin: 4px;
+      margin: 1px;
       &.skill {
         background-color: grey;
       }
@@ -27,7 +28,7 @@
         color: white;
       }
       .add-item {
-        flex: 0 0 1.25rem;
+        flex: 0 0 0.125rem;
         color: white;
         &:hover {
           color: var(--main-sheet-back-color);
@@ -45,11 +46,11 @@
     }
     .weapon-list {
       .weapon-row {
-        width: 100%;
+        width: 98%;
         height: auto;
         display: grid;
         border-bottom: 1px solid;
-        grid-template-columns: 1rem 1.375rem 1fr 10.5rem 2.75rem 2.75rem;
+        grid-template-columns: 1rem 1.375rem 1fr 6.5rem 2.75rem 2.75rem;
         grid-template-rows: 1.375rem 1fr;
         grid-template-areas:
           'expand image name range weaponControl itemControl'

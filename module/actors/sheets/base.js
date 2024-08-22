@@ -132,12 +132,12 @@ export class CoC7ActorSheet extends ActorSheet {
             label: 'Magic points',
             auto: true
           },
-          lck: { value: null, short: 'LCK', label: 'Luck' },
+          lck: { value: null, short: 'LCK', label: 'Szczęście' },
           san: {
             value: null,
             max: 99,
             short: 'SAN',
-            label: 'Sanity',
+            label: 'Poczytalność',
             auto: true
           },
           mov: {
@@ -977,7 +977,7 @@ export class CoC7ActorSheet extends ActorSheet {
                 break
               case 'san':
                 toolTip = game.i18n.format('CoC7.ToolTipSanity', {
-                  skill: 'Sanity',
+                  skill: 'Poczytalność',
                   regular: attributes.value ?? 0,
                   hard: Math.floor((attributes.value ?? 0) / 2),
                   extreme: Math.floor((attributes.value ?? 0) / 5)

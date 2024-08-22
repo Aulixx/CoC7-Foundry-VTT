@@ -89,7 +89,7 @@
           "lck": {
             "value": null,
             "short": "LCK",
-            "label": "Luck",
+            "label": "Szczęście",
             "max": 99,
             "bonusDice": 0
           },
@@ -97,7 +97,7 @@
             "value": null,
             "max": 99,
             "short": "SAN",
-            "label": "Sanity",
+            "label": "Poczytalność",
             "auto": true,
             "dailyLoss": 0,
             "oneFifthSanity": " / 0",

@@ -1,9 +1,9 @@
-<ol class="skills-list">
+<ol class="skills-list-2">
   {{#each skills as |skill id|}}
     <li class="item {{#if ../pulpRuleArchetype}}pulpCharacter{{/if}}" data-skill-id="{{skill._id}}" data-item-id="{{skill._id}}">
       <div class="item-controls flexrow">
         {{#unless skill.system.properties.noadjustments}}
-          <div class="item-control occupation-skill-flag {{#if../allowCharCreation}}clickable{{/if}}" title="{{localize 'CoC7.OccupationSkill'}}">
+          <div class="item-control occupation-skill-flag {{#if../allowCharCreation}}clickable{{/if}}" style="margin-left:2px" title="{{localize 'CoC7.OccupationSkill'}}"> 
             {{#if skill.system.flags.occupation}}
               <i class="fas fa-circle"></i>
             {{else}}
@@ -22,7 +22,7 @@
         {{/unless}}
       </div>
 
-      <span class="skill-name {{#if skill.system.flags.developement}}{{#if ../allowDevelopment}}rollable{{/if}} flagged4dev{{/if}}">{{skill.name}}</span>
+      <span class="skill-name-2 {{#if skill.system.flags.developement}}{{#if ../allowDevelopment}}rollable{{/if}} flagged4dev{{/if}}">{{skill.name}}</span>
       <div class="adjustment-value locked" title="{{localize 'CoC7.SkillBase'}}">
         <span>{{skill.system.base}}</span>
       </div>
