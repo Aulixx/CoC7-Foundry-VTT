@@ -366,12 +366,6 @@
                 </ol>
               </div>
             </section>
-
-            <h4 class="result-details">{{roll.resultType}}, {{roll.successRequired}}</h4>
-            {{#if roll.details}}
-            <h4 class="result-details">{{roll.details}}</h4>
-            {{/if}}
-
             {{#unless ../damageRolled}}
             <div class="card-buttons owner-only" data-actor-id="{{roll.actor.id}}" style="padding-top: 5px;margin: 0;">
               {{#unless roll.isSuccess}}
@@ -394,9 +388,7 @@
                 {{#each roll.increaseSuccess as |level key|}}
                 <button data-index="{{key}}" data-action="useLuck" data-luck-amount="{{level.luckToSpend}}"
                   data-luck-to-spend="{{level.luckToSpend}}" data-new-success-level="{{level.difficulty}}"
-                  data-difficulty="{{level.difficulty}}" data-difficulty-name="{{difficultyName}}">{{localize
-                  'CoC7.IncreaseSuccessLevel'}} : {{level.difficultyName}} - {{level.luckToSpend}} {{ localize
-                  'CoC7.Luck'}}.</button>
+                  data-difficulty="{{level.difficulty}}" data-difficulty-name="{{difficultyName}}">Zwiększ sukces: {{level.difficultyName}} (-{{level.luckToSpend}})</button>
                 {{/each}}
               </div>
               {{/if}}

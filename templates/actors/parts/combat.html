@@ -33,11 +33,11 @@
             {{#if weapon.system.properties.ahdb}}<span class="tag" title="Add DB">{{localize 'CoC7.WeaponAhdb'}}</span>{{/if}}
           </div>
           <div class="item-controls">
-            <a class="item-control item-edit" title="{{localize 'CoC7.EditWeapon'}}"><i class="fas fa-edit"></i></a>
             {{#unless ../data.system.flags.locked}}
-              <a class="item-control item-delete" title="{{localize 'CoC7.DeleteWeapon'}}"><i class="fas fa-trash"></i></a>
-            {{/unless}}
+            <a class="item-control item-edit" title="{{localize 'CoC7.EditWeapon'}}"><i class="fas fa-edit"></i></a>           
+              <a class="item-control item-delete" title="{{localize 'CoC7.DeleteWeapon'}}"><i class="fas fa-trash"></i></a>                   
           </div>
+          {{/unless}}
         </li>
       {{/each}}
     </ol>
@@ -79,13 +79,13 @@
             <div class="control">
               <a class="reload-weapon" title="{{localize 'CoC7.Reload'}}"><i class="game-icon game-icon-chaingun"></i></a>
             </div>
-          </div>
+          </div>         
           <div class="item-controls">
-            <a class="item-control item-edit" title="{{localize 'CoC7.EditWeapon'}}"><i class="fas fa-edit"></i></a>
             {{#unless ../data.system.flags.locked}}
-              <a class="item-control item-delete" title="{{localize 'CoC7.DeleteWeapon'}}"><i class="fas fa-trash"></i></a>
-            {{/unless}}
+            <a class="item-control item-edit" title="{{localize 'CoC7.EditWeapon'}}"><i class="fas fa-edit"></i></a>           
+              <a class="item-control item-delete" title="{{localize 'CoC7.DeleteWeapon'}}"><i class="fas fa-trash"></i></a>                   
           </div>
+          {{/unless}}
         </li>
       {{/each}}
     </ol>

@@ -21,7 +21,7 @@
       }
 
       input {
-        text-align: center;
+        text-align: left;
       }
     }
 
@@ -38,6 +38,11 @@
   }
 
   .development {
+
+    .adjustment-value {
+      text-align: left;
+    }
+
     .skills-list-2 {
       height: 101%;
       overflow-y: auto;
@@ -45,6 +50,7 @@
       flex-direction: column;
       flex-wrap: wrap;
       padding-top: 8px !important;
+
 
       .item {
         .item-controls {
@@ -85,13 +91,14 @@
         input {
           height: 1rem;
           line-height: 1rem;
-          font-size: 0.8rem;
+          font-size: 0.7rem;
           color: var(--main-sheet-front-color);
           background-color: rgba(0, 0, 0, 0.1);
           padding: 0 1px;
           margin: 0;
           text-align: center;
           min-width: 0;
+          margin-bottom: -1px;
         }
 
         .adjustment-value {

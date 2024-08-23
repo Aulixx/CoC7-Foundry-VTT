@@ -92,9 +92,6 @@
               </ol>
             </div>
           </section>
-
-          <h4 class="result-details" style="margin: 0">{{check.resultType}}</h4>
-
           <div class="card-buttons owner-only" data-actor-id="{{check.actor.id}}" style="padding: 2px 0;margin: 0;">
             {{#unless check.isSuccess}}
               {{#if check.canBePushed}}
@@ -112,7 +109,7 @@
             {{#unless check.pushing}}
               {{#if check.canIncreaseSuccess}}
                 {{#each check.increaseSuccess as |level|}}
-                  <button data-action="useLuck" data-luck-amount="{{level.luckToSpend}}" data-new-success-level="{{level.difficulty}}">{{localize 'CoC7.UpgradeSuccessWithLuck' difficultyName=level.difficultyName luckToSpend=level.luckToSpend}}</button>
+                  <button data-action="useLuck" data-luck-amount="{{level.luckToSpend}}" data-new-success-level="{{level.difficulty}}">Zwiększ sukces: {{level.difficultyName}} (-{{level.luckToSpend}})</button>
                 {{/each}}
               {{/if}}
             {{/unless}}
