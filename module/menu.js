@@ -80,13 +80,7 @@ export class CoC7Menu {
           title: 'CoC7.InvestigatorWizard.Title',
           onClick: async () => await CoC7InvestigatorWizard.create()
         },
-        {
-          button: true,
-          icon: 'game-icon game-icon-police-badge',
-          name: 'Dev-Roll',
-          title: 'CoC7.DevRoll.Title',
-          onClick: async () => await COC7RollDialog.create()
-        },
+
       ]
     })
     if (showHiddenDevMenu) {
