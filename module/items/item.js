@@ -810,20 +810,12 @@ export class CoC7Item extends Item {
     }
 
     if (skillName) {
-      labels.push({
-        name: skillLabel,
-        value: skillName
-      })
+      
     }
 
     labels.push({
-      name: game.i18n.localize('CoC7.WeaponUsesPerRound'),
+      name: "Użycia/runda",
       value: this.usesPerRoundString
-    })
-
-    labels.push({
-      name: game.i18n.localize('CoC7.WeaponMalfunction'),
-      value: this.system.malfunction ? this.system.malfunction : '-'
     })
 
     if (this.system.bullets) {
@@ -832,6 +824,16 @@ export class CoC7Item extends Item {
         value: this.system.bullets
       })
     }
+
+    labels.push({
+      name: "Zasięg",
+      value: this.system.range.normal.value
+    })
+
+        labels.push({
+      name: game.i18n.localize('CoC7.WeaponMalfunction'),
+      value: this.system.malfunction ? this.system.malfunction : '-'
+    })
   }
 
   canBePushed () {

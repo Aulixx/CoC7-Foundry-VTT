@@ -4,7 +4,7 @@ import { CoC7Utilities } from './utilities.js'
 import { CoC7ActorImporterDialog } from './apps/actor-importer-dialog.js'
 import { CoC7ContentLinkDialog } from './apps/coc7-content-link-dialog.js'
 import { CoC7InvestigatorWizard } from './apps/investigator-wizard.js'
-import { COC7RollDialog } from './apps/dev-roll-dialog.js'
+import { COC7Dev } from './apps/dev.js'
 
 class CoC7MenuLayer extends PlaceablesLayer {
   constructor () {
@@ -80,6 +80,13 @@ export class CoC7Menu {
           title: 'CoC7.InvestigatorWizard.Title',
           onClick: async () => await CoC7InvestigatorWizard.create()
         },
+        //{
+        //  button: true,
+         // icon: 'fas fa-dice',
+         // name: 'Kosci',
+        //  title: 'Kości',
+        //  onClick: async () => await COC7Dev.create()
+       // },
 
       ]
     })

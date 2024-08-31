@@ -32,10 +32,10 @@
       "system": "CoC7"
     },
     {
-      "label": "1920 Occupations",
+      "label": "Zawody 1920",
       "type": "Item",
       "name": "occupations",
-      "path": "./packs/system-doc.db",
+      "path": "./packs/1920occupations.db",
       "system": "CoC7"
     }
   ],

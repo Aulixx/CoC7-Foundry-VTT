@@ -28,10 +28,6 @@
               {{/if}}
             {{/each}}
           </div>
-          <div class="weapon-control">
-            {{#if weapon.system.properties.addb}}<span class="tag" title="Add DB">{{localize 'CoC7.WeaponAddb'}}</span>{{/if}}
-            {{#if weapon.system.properties.ahdb}}<span class="tag" title="Add DB">{{localize 'CoC7.WeaponAhdb'}}</span>{{/if}}
-          </div>
           <div class="item-controls">
             {{#unless ../data.system.flags.locked}}
             <a class="item-control item-edit" title="{{localize 'CoC7.EditWeapon'}}"><i class="fas fa-edit"></i></a>           

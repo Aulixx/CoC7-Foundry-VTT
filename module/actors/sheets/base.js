@@ -1422,9 +1422,9 @@ export class CoC7ActorSheet extends ActorSheet {
 
       const props = $('<div class="item-properties"></div>')
       for (const p of chatData.properties) {
-        props.append(
-          `<div class="tag item-property">${game.i18n.localize(p)}</div>`
-        )
+        // props.append(
+       //   `<div class="tag item-property">${game.i18n.localize(p)}</div>`
+        //)
       }
       div.append(props)
 

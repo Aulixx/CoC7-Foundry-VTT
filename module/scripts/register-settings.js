@@ -524,22 +524,20 @@ export function registerSettings () {
     config: true,
     type: Boolean,
     default: false
-  })
-  /**
-   * Other settings
-   */
+  }) 
+  
   game.settings.register('CoC7', 'hiddendevmenu', {
     name: 'Hidden dev menu',
     hint: 'Use at your own risk',
     scope: 'world',
-    config: true,
+    config: false,
     type: Boolean,
     default: false
-  })
+  }) 
   game.settings.register('CoC7', 'developmentEnabled', {
     name: 'Dev phased allowed',
     scope: 'world',
-    config: false,
+    config: true,
     type: Boolean,
     default: false
   })
@@ -588,7 +586,7 @@ export function registerSettings () {
   game.settings.register('CoC7', 'InvestigatorWizardSetup', {
     name: 'Force specific setup CoC ID for Investigator Wizard',
     scope: 'world',
-    config: false,
+    config: true,
     type: String,
     default: ''
   })
@@ -611,7 +609,7 @@ export function registerSettings () {
     scope: 'world',
     config: false,
     type: Boolean,
-    default: false
+    default: true
   })
   game.settings.register('CoC7', 'InvestigatorWizardPointBuy', {
     name: 'Force point buy instead of setup choice',
